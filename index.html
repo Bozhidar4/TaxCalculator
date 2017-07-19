@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tax Calculator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Incoming Tax Calculator</h1>
+    </header>
+    <div class="container">
+
+        <!-- Form -->
+        <form name="taxForm" class="form-horizontal">
+
+            <!-- User input -->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Please enter your annual salary</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" placeholder="Annual salary" autofocus name="salary" required>
+                    </div>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="button" value="Submit" class="submitButton" onClick="calculateTax()">
+                </div>
+            </div>
+
+            <!-- Results -->
+            <!-- Gross Salary -->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Gross Salary</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Gross Salary" name="gross" readonly>
+                    </div>
+            </div>
+
+            <!-- Tax free allowance -->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Tax free allowance</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control resultBmi resultBmiText" placeholder="If salary is up to 10600" name="taxFree" readonly>
+                    </div>
+            </div>
+
+            <!-- Tax at 20% -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Tax at 20%</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control resultBmi resultInfo" placeholder="if salary is between 10601 and 31000" name="taxTwentyPercent" readonly>
+                    </div>
+            </div>
+
+            <!-- Tax at 40% -->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Tax at 40%</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control resultBmi resultBmiText" placeholder="If salary is more than 31000" name="taxFortyPercent" readonly>
+                    </div>
+            </div>
+
+            <!-- Net Salary -->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Net Salary</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control resultBmi resultInfo" placeholder="Net Salary" name="netSalary" readonly>
+                    </div>
+            </div>
+
+            <!-- Reset button -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="reset" class="submitButton">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/common.js"></script>
+    <script src="Scripts/jquery-1.9.1.intellisense.js"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+</body>
+</html>
